@@ -1,0 +1,62 @@
+@import "src/styles/_common.scss";
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 21.25em);
+  width: 77.8em;
+  background-color: $bg-color;
+  border-radius: 25px;
+  margin: 0 auto 3em auto;
+  row-gap: 3.5em;
+  column-gap: 0;
+  padding: 3.5em 0;
+  justify-content: space-evenly;
+}
+
+.card {
+  background-color: $main-color;
+  height: 21.25em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cardOverlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(0, 0, 0, 1) 102%
+  );
+  border-radius: 10px;
+  position: absolute;
+}
+
+.cardTitle {
+  color: white;
+  font-family: $font;
+  font-size: 1.125em;
+  font-weight: 100;
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  right: 1em;
+  margin-bottom: 1em;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}

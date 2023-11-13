@@ -1,12 +1,33 @@
 import React from "react";
-import Navigation from "./Navigation";
+import { NavLink } from "react-router-dom";
+import styles from "../styles/components/_header.module.scss";
 
 const Header = () => {
   return (
-    <div>
-      <img src='/images/logo-kasa.png' alt='logo Kasa' />
-      <Navigation />
-    </div>
+    <header className={styles.header}>
+      <img src='/logo-header.svg' alt='logo Kasa' />
+      <nav className={styles.navigation}>
+        <ul>
+          <li>
+            <NavLink
+              to='/'
+              className={({ isActive }) => (isActive ? styles.active : "")}
+            >
+              Accueil
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to='/about'
+              className={({ isActive }) => (isActive ? styles.active : "")}
+            >
+              À Propos
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

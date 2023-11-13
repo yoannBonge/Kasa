@@ -1,0 +1,30 @@
+@import "src/styles/_common.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3em 6em;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 4em;
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-family: $font;
+  font-size: 1.5em;
+  color: $main-color;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+}

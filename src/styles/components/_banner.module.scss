@@ -1,0 +1,27 @@
+@import "src/styles/_common.scss";
+
+.banner {
+  position: relative;
+  margin-bottom: 2.5em;
+}
+
+.bannerText {
+  color: white;
+  font-family: $font;
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.bannerImage {
+  display: flex;
+  width: 77.8em;
+  height: 14em;
+  border-radius: 25px;
+  margin: 0 6em;
+  object-fit: cover;
+  filter: brightness(0.7);
+}

@@ -1,0 +1,9 @@
+@import "src/styles/_common.scss";
+
+.categoriesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 2.5em;
+}
