@@ -1,1 +1,14 @@
 @import "src/styles/_common.scss";
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 21.25em);
+  width: 77.8em;
+  background-color: $bg-color;
+  border-radius: 25px;
+  margin: 0 auto 3em auto;
+  row-gap: 3.5em;
+  column-gap: 0;
+  padding: 3.5em 0;
+  justify-content: space-evenly;
+}

@@ -1,9 +1,15 @@
 @import "src/styles/_common.scss";
 
-.categoriesContainer {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
-  margin-bottom: 2.5em;
+}
+
+.categoriesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 64em;
+  gap: 3.5em;
+  margin-bottom: 4em;
 }

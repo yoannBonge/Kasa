@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "../components/Header";
+import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import styles from "../styles/components/_about.module.scss";
-import Banner from "../components/Banner";
 
 const About = () => {
   return (

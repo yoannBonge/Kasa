@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../components/Header";
-import Cards from "../components/Cards";
-import Footer from "../components/Footer";
 import Banner from "../components/Banner";
+import Card from "../components/Card";
+import Footer from "../components/Footer";
+import styles from "../styles/components/_home.module.scss";
 
 const Home = () => {
   return (
@@ -14,7 +15,9 @@ const Home = () => {
           alt='Image de bannière montrant des rochers et arbres en bord de mer'
           text='Chez vous, partout et ailleurs'
         />
-        <Cards />
+        <div className={styles.cardsContainer}>
+          <Card />
+        </div>
       </main>
       <Footer />
     </>

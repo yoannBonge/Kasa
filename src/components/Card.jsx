@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import styles from "../styles/components/_cards.module.scss";
+import styles from "../styles/components/_card.module.scss";
 
-const Cards = () => {
+const Card = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className={styles.cardsContainer}>
+    <>
       {data.map((housing) => (
         <div key={housing.id} className={styles.card}>
           <div className={styles.cardContent}>
@@ -28,8 +28,8 @@ const Cards = () => {
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
-export default Cards;
+export default Card;
