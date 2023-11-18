@@ -1,28 +1,25 @@
 @import "src/styles/_common.scss";
 
-.banner {
+.bannerContainer {
   position: relative;
+  height: 20%;
   margin-bottom: 2.5em;
-}
-
-.bannerText {
-  color: white;
-  font-family: $font;
-  font-size: 3em;
-  font-weight: 500;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.bannerImage {
-  display: flex;
-  width: 77.8em;
-  height: 14em;
-  border-radius: 25px;
-  margin: 0 6em;
-  object-fit: cover;
-  filter: brightness(0.7);
+  .bannerText {
+    color: white;
+    font-family: $font;
+    font-size: 3em;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    white-space: nowrap;
+  }
+  .bannerImage {
+    display: flex;
+    border-radius: 25px;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
 }

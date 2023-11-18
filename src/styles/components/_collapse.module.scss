@@ -13,6 +13,11 @@
   border-radius: 5px;
   justify-content: center;
   margin-bottom: -1.6em;
+  &.housingStyle {
+    border-radius: 10px;
+    height: 3.3em;
+    margin-bottom: -2.2em;
+  }
 }
 
 .cover {
@@ -20,6 +25,9 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 1em;
+  &.housingStyle {
+    margin: 0 0.6em;
+  }
 }
 
 .category {
@@ -28,6 +36,10 @@
   font-size: 1.5em;
   font-weight: 500;
   margin: 0;
+  &.housingStyle {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
 }
 
 .arrow {
@@ -41,7 +53,6 @@
 }
 
 .collapseContent {
-  height: 0;
   overflow: hidden;
   transition: height ease 0.3s;
 }
@@ -53,13 +64,19 @@
   position: relative;
   margin-bottom: -2.5em;
   z-index: -1;
+  &.housingStyle {
+    border-radius: 10px;
+  }
 }
 
 .content {
   color: $main-color;
   font-family: $font;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.1em;
   line-height: 1.5em;
-  padding: 1.6em 1.2em 1.2em 1.2em;
+  padding: 1.3em 1em 0.2em 1em;
+  &.housingStyle {
+    padding: 2.2em 1.2em 1em 1.2em;
+  }
 }

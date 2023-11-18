@@ -1,0 +1,27 @@
+@import "src/styles/_common.scss";
+
+.title404 {
+  color: $main-color;
+  font-family: $font;
+  font-size: 16em;
+  font-weight: 700;
+  margin-top: 0.1em;
+}
+
+.description {
+  color: $main-color;
+  font-family: $font;
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 2.5em;
+  margin-bottom: 4em;
+}
+
+.backHome {
+  color: $main-color;
+  font-family: $font;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-bottom: 6em;
+}

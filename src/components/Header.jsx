@@ -5,7 +5,7 @@ import styles from "../styles/components/_header.module.scss";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <img src='/logo-header.svg' alt='logo Kasa' />
+      <img className={styles.logoKasa} src='/logo-header.svg' alt='logo Kasa' />
       <nav className={styles.navigation}>
         <ul>
           <li>

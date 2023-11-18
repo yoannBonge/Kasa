@@ -1,0 +1,100 @@
+@import "src/styles/_common.scss";
+
+.housingInfos {
+  display: flex;
+  flex-direction: column;
+  width: 77.8em;
+  margin-bottom: 5em;
+
+  .mainInfos {
+    display: flex;
+    justify-content: space-between;
+    .titleInfos {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        color: $main-color;
+        font-family: $font;
+        font-weight: 500;
+        font-size: 2.3em;
+        align-self: flex-start;
+        margin-bottom: 0.1em;
+      }
+      .location {
+        color: $main-color;
+        font-family: $font;
+        font-weight: 500;
+        font-size: 1.3em;
+        align-self: flex-start;
+        margin-top: 0;
+      }
+      .tagsContainer {
+        display: flex;
+        gap: 0.7em;
+
+        .tag {
+          display: flex;
+          flex-wrap: wrap;
+          background-color: $main-color;
+          color: white;
+          font-family: $font;
+          font-size: 0.9em;
+          align-items: center;
+          justify-content: center;
+          min-width: 8.1em;
+          height: 1.8em;
+          padding: 0 0.6em;
+          border-radius: 11px;
+        }
+      }
+    }
+    .host {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1em;
+
+      .hostInfos {
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+        .hostName {
+          display: flex;
+          align-items: center;
+          text-align: end;
+          width: 6em;
+          color: $main-color;
+          font-family: $font;
+          font-size: 1.2em;
+          line-height: 1.4em;
+          font-weight: 500;
+        }
+        .hostImage {
+          width: 4.2em;
+          height: 4.2em;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+      .hostRating {
+        margin-top: 0.8em;
+      }
+    }
+  }
+  .features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.8em;
+    .description {
+      width: 36.5em;
+    }
+    .equipment {
+      width: 36.5em;
+    }
+  }
+}
+
+.equipmentsElements {
+  list-style: none;
+  margin-left: -2.4em;
+}

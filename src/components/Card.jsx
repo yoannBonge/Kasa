@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/components/_card.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const Card = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
+  const handleClick = (housing) => {
+    navigate("/housing", { state: { housing } });
+  };
 
   useEffect(() => {
     fetch("housings.json")
@@ -13,7 +18,11 @@ const Card = () => {
   return (
     <>
       {data.map((housing) => (
-        <div key={housing.id} className={styles.card}>
+        <div
+          className={styles.card}
+          key={housing.id}
+          onClick={() => handleClick(housing)}
+        >
           <div className={styles.cardContent}>
             <div className={styles.cardOverlay}>
               <h2 className={styles.cardTitle}>{housing.title}</h2>

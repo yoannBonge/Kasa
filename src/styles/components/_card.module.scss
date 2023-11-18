@@ -1,9 +1,10 @@
 @import "src/styles/_common.scss";
 
 .card {
-  background-color: $main-color;
+  width: 21.25em;
   height: 21.25em;
   border-radius: 10px;
+  padding: 0;
   cursor: pointer;
 }
 

@@ -5,11 +5,20 @@
   justify-content: space-between;
   align-items: center;
   margin: 3em 6em;
+  @include devices(mobile) {
+    margin: 1.5em;
+  }
+  .logoKasa {
+    width: 18%;
+  }
 }
 
 .navigation ul {
   display: flex;
   gap: 4em;
+  @include devices(mobile) {
+    gap: 2em;
+  }
   li {
     list-style: none;
   }
@@ -19,10 +28,15 @@ a {
   text-decoration: none;
   font-family: $font;
   font-size: 1.5em;
-  font-weight: bolder;
+  font-weight: 500;
   color: $main-color;
   cursor: pointer;
   padding: 3px;
+  white-space: nowrap;
+  @include devices(mobile) {
+    text-transform: uppercase;
+    font-size: 1em;
+  }
 }
 
 .active {

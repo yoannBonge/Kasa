@@ -1,0 +1,10 @@
+@import "src/styles/_common.scss";
+
+.ratingContainer {
+  display: flex;
+  gap: 1em;
+}
+
+.star {
+  width: 1.5em;
+}

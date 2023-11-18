@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styles from "../styles/components/_collapse.module.scss";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, children, housingStyle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [arrowDown, setArrowDown] = useState(false);
   const contentRef = useRef();
@@ -12,12 +12,26 @@ const Collapse = ({ title, content }) => {
 
   return (
     <div className={styles.collapse}>
-      <div className={styles.collapseContainer}>
-        <div className={styles.cover}>
-          {title && <h3 className={styles.category}>{title}</h3>}
+      <div
+        className={`${styles.collapseContainer} ${
+          housingStyle && styles.housingStyle
+        }`}
+      >
+        <div
+          className={`${styles.cover} ${housingStyle && styles.housingStyle}`}
+        >
+          {title && (
+            <h3
+              className={`${styles.category} ${
+                housingStyle && styles.housingStyle
+              }`}
+            >
+              {title}
+            </h3>
+          )}
           <img
             className={`${styles.arrow} ${arrowDown && styles.reverseArrow}`}
-            src='arrow.svg'
+            src='collapse-arrow.svg'
             alt='Flèche pour ouvrir/fermer le contenu'
             onClick={toggle}
           />
@@ -32,8 +46,18 @@ const Collapse = ({ title, content }) => {
             : { height: "0px" }
         }
       >
-        <div className={styles.contentContainer}>
-          <p className={styles.content}>{content}</p>
+        <div
+          className={`${styles.contentContainer} ${
+            housingStyle && styles.housingStyle
+          }`}
+        >
+          <div
+            className={`${styles.content} ${
+              housingStyle && styles.housingStyle
+            }`}
+          >
+            {children}
+          </div>
         </div>
       </div>
     </div>

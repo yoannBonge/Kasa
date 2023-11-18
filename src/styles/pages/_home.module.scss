@@ -1,14 +1,26 @@
 @import "src/styles/_common.scss";
 
+main {
+  margin: 0 6em;
+}
+
+// .banner {
+//   height: 223px;
+// }
+
 .cardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 21.25em);
-  width: 77.8em;
+  width: 100%;
   background-color: $bg-color;
   border-radius: 25px;
-  margin: 0 auto 3em auto;
+  margin-bottom: 3em;
   row-gap: 3.5em;
   column-gap: 0;
   padding: 3.5em 0;
   justify-content: space-evenly;
+  @include devices(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
 }

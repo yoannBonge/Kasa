@@ -1,3 +1,25 @@
 $main-color: #ff6060;
 $bg-color: #f6f6f6;
 $font: "Montserrat", sans-serif;
+
+//Breakpoints
+
+@mixin devices($breakpoint) {
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+}
