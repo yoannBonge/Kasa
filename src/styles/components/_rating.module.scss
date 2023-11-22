@@ -3,8 +3,13 @@
 .ratingContainer {
   display: flex;
   gap: 1em;
-}
-
-.star {
-  width: 1.5em;
+  @include devices(mobile) {
+    gap: 0.6em;
+  }
+  .star {
+    width: 1.5em;
+    @include devices(mobile) {
+      width: 1.2em;
+    }
+  }
 }

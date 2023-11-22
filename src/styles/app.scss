@@ -1,7 +1,12 @@
 @import "src/styles/_common.scss";
 
 body {
-  max-width: 1440px;
   min-width: 320px;
-  margin: 0 auto;
+  margin: 0;
+  main {
+    margin: 0 6em;
+    @include devices(mobile) {
+      margin: 0 1.5em;
+    }
+  }
 }

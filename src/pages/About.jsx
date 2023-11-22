@@ -12,7 +12,8 @@ const About = () => {
       <main>
         <Banner
           image='forest-mountains.png'
-          alt='Image de bannière montrant un arbre en premier plan et des montagnes enneigées'
+          altImage='Image de bannière montrant un arbre en premier plan et des montagnes enneigées'
+          showChildren={false}
         />
         <section className={styles.companyValues}>
           <Collapse title='Fiabilité'>

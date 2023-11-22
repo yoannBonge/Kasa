@@ -1,12 +1,27 @@
 @import "src/styles/_common.scss";
 
-main {
-  margin: 0 6em;
+.bannerText {
+  color: white;
+  font-family: $font;
+  font-size: 3.2vw;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  white-space: nowrap;
+  @include devices(mobile) {
+    left: 32%;
+    font-size: 5.5vw;
+  }
+  .mobileLineBreak {
+    display: none;
+    @include devices(mobile) {
+      display: block;
+    }
+  }
 }
-
-// .banner {
-//   height: 223px;
-// }
 
 .cardsContainer {
   display: grid;
@@ -16,11 +31,15 @@ main {
   border-radius: 25px;
   margin-bottom: 3em;
   row-gap: 3.5em;
-  column-gap: 0;
   padding: 3.5em 0;
   justify-content: space-evenly;
   @include devices(mobile) {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: white;
+    gap: 2em;
+    padding: 0;
+    margin-bottom: 2em;
   }
 }

@@ -10,11 +10,9 @@ const Footer = () => {
           src='logo-footer.svg'
           alt='logo Kasa'
         />
-        <img
-          className={styles.rightsReserved}
-          src='rights-reserved.svg'
-          alt='Mention : Tous droits réservés'
-        />
+        <span className={styles.rightsReserved}>
+          © 2020 Kasa. All rights reserved
+        </span>
       </div>
     </footer>
   );

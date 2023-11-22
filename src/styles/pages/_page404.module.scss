@@ -6,6 +6,10 @@
   font-size: 16em;
   font-weight: 700;
   margin-top: 0.1em;
+  @include devices(mobile) {
+    font-size: 6em;
+    margin-top: 0.8em;
+  }
 }
 
 .description {
@@ -15,6 +19,20 @@
   font-weight: 500;
   margin-top: 2.5em;
   margin-bottom: 4em;
+  .mobileLineBreak {
+    display: none;
+  }
+  @include devices(mobile) {
+    font-size: 1.2em;
+    width: 20em;
+    margin-top: 4em;
+    margin-bottom: 5em;
+    text-align: center;
+    line-height: 1.5em;
+    .mobileLineBreak {
+      display: block;
+    }
+  }
 }
 
 .backHome {
@@ -24,4 +42,7 @@
   font-weight: 500;
   text-decoration: underline;
   margin-bottom: 6em;
+  @include devices(mobile) {
+    text-transform: none;
+  }
 }

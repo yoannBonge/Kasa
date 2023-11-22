@@ -3,12 +3,15 @@
 .housingInfos {
   display: flex;
   flex-direction: column;
-  width: 77.8em;
+  width: 100%;
   margin-bottom: 5em;
 
   .mainInfos {
     display: flex;
     justify-content: space-between;
+    @include devices(mobile) {
+      flex-direction: column;
+    }
     .titleInfos {
       display: flex;
       flex-direction: column;
@@ -20,6 +23,10 @@
         font-size: 2.3em;
         align-self: flex-start;
         margin-bottom: 0.1em;
+        @include devices(mobile) {
+          font-size: 1.6em;
+          margin-bottom: 0.6em;
+        }
       }
       .location {
         color: $main-color;
@@ -28,10 +35,14 @@
         font-size: 1.3em;
         align-self: flex-start;
         margin-top: 0;
+        @include devices(mobile) {
+          font-size: 1em;
+        }
       }
       .tagsContainer {
         display: flex;
         gap: 0.7em;
+        flex-wrap: wrap;
 
         .tag {
           display: flex;
@@ -43,9 +54,13 @@
           align-items: center;
           justify-content: center;
           min-width: 8.1em;
-          height: 1.8em;
+          height: 1.9em;
           padding: 0 0.6em;
           border-radius: 11px;
+          @include devices(mobile) {
+            border-radius: 6px;
+            font-size: 0.7em;
+          }
         }
       }
     }
@@ -53,6 +68,11 @@
       display: flex;
       flex-direction: column;
       margin-top: 1em;
+      @include devices(mobile) {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+      }
 
       .hostInfos {
         display: flex;
@@ -68,33 +88,56 @@
           font-size: 1.2em;
           line-height: 1.4em;
           font-weight: 500;
+          @include devices(mobile) {
+            font-size: 1.1em;
+          }
         }
         .hostImage {
-          width: 4.2em;
-          height: 4.2em;
+          width: 4.3em;
+          height: 4.3em;
           object-fit: cover;
           border-radius: 50%;
+          @include devices(mobile) {
+            width: 3.2em;
+            height: 3.2em;
+          }
         }
       }
       .hostRating {
         margin-top: 0.8em;
+        @include devices(mobile) {
+          margin-top: 0;
+        }
       }
     }
   }
+
   .features {
     display: flex;
     justify-content: space-between;
+    justify-items: stretch;
     margin-top: 1.8em;
+    @include devices(mobile) {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 1em;
+      gap: 4em;
+    }
     .description {
-      width: 36.5em;
+      width: 47%;
+      @include devices(mobile) {
+        width: 100%;
+      }
     }
     .equipment {
-      width: 36.5em;
+      width: 47%;
+      @include devices(mobile) {
+        width: 100%;
+      }
+      .equipmentsElements {
+        list-style: none;
+        margin-left: -2.4em;
+      }
     }
   }
-}
-
-.equipmentsElements {
-  list-style: none;
-  margin-left: -2.4em;
 }

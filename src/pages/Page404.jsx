@@ -10,7 +10,8 @@ const Page404 = () => {
       <main>
         <span className={styles.title404}>404</span>
         <span className={styles.description}>
-          Oups ! La page que vous demandez n'existe pas.
+          Oups ! La page que <br className={styles.mobileLineBreak} />
+          vous demandez n'existe pas.
         </span>
         <a href='/' className={styles.backHome}>
           Retourner sur la page d'accueil

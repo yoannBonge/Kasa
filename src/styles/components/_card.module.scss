@@ -6,45 +6,44 @@
   border-radius: 10px;
   padding: 0;
   cursor: pointer;
-}
-
-.cardContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.cardOverlay {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 75%,
-    rgba(0, 0, 0, 1) 102%
-  );
-  border-radius: 10px;
-  position: absolute;
-}
-
-.cardTitle {
-  color: white;
-  font-family: $font;
-  font-size: 1.125em;
-  font-weight: 400;
-  position: absolute;
-  bottom: 0;
-  left: 1em;
-  right: 1em;
-  margin-bottom: 1em;
-}
-
-.cardImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+  @include devices(mobile) {
+    width: 100%;
+  }
+  .cardContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .cardOverlay {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 75%,
+        rgba(0, 0, 0, 1) 102%
+      );
+      border-radius: 10px;
+      position: absolute;
+      .cardTitle {
+        color: white;
+        font-family: $font;
+        font-size: 1.125em;
+        font-weight: 400;
+        position: absolute;
+        bottom: 0;
+        left: 1em;
+        right: 1em;
+        margin-bottom: 1em;
+      }
+    }
+    .cardImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
 }

@@ -1,26 +1,41 @@
+@import "src/styles/_common.scss";
+
 .footer {
   display: flex;
   background-color: rgb(0, 0, 0);
-  height: 15em;
+  height: 14em;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   justify-content: center;
   align-items: end;
-}
-
-.footerElements {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  align-items: center;
-  margin-bottom: 2.2em;
-  gap: 3em;
-}
-
-.logoFooter {
-  width: 30%;
-}
-
-.rightsReserved {
-  width: 100%;
+  @include devices(mobile) {
+    align-items: center;
+  }
+  .footerElements {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    margin-bottom: 2em;
+    gap: 3em;
+    @include devices(mobile) {
+      gap: 1em;
+      margin: 0;
+    }
+    .logoFooter {
+      width: 30%;
+      @include devices(mobile) {
+        width: 100%;
+      }
+    }
+    .rightsReserved {
+      color: white;
+      font-family: $font;
+      font-weight: 400;
+      font-size: 1.5em;
+      @include devices(mobile) {
+        font-size: 1em;
+      }
+    }
+  }
 }
