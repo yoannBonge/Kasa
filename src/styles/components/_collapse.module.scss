@@ -10,28 +10,29 @@
     height: 3.5vw;
     border-radius: 5px;
     justify-content: center;
-    margin-bottom: -1.6em;
+    margin-bottom: -0.2em;
     @include devices(mobile) {
       height: 10vw;
       border-radius: 8px;
     }
     &.housingStyle {
+      transition: border-radius 0.3s ease;
       border-radius: 10px;
-      height: 3.3em;
-      margin-bottom: -2.2em;
       @include devices(mobile) {
         height: 2.7em;
         border-radius: 8px;
       }
+    }
+    &.openCollapse {
+      transition: border-radius 0.3s ease;
+      border-radius: 5px;
     }
     .cover {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 0 1em;
-      &.housingStyle {
-        margin: 0 0.6em;
-      }
+
       .category {
         color: white;
         font-family: $font;
@@ -43,7 +44,6 @@
         }
         &.housingStyle {
           font-size: 1.2em;
-          font-weight: 400;
         }
       }
       .arrow {
@@ -67,7 +67,13 @@
       position: relative;
       z-index: -1;
       &.housingStyle {
+        transition: border-radius 0.3s ease;
         border-radius: 10px;
+        margin-top: -0.6em;
+      }
+      &.openCollapse {
+        transition: border-radius 0.3s ease;
+        border-radius: 5px;
       }
     }
     .content {
@@ -76,9 +82,9 @@
       font-weight: 400;
       font-size: 1.1em;
       line-height: 1.5em;
-      padding: 1.3em 1em 0.2em 1em;
+      padding: 0.1em 1em 0.2em 1em;
       &.housingStyle {
-        padding: 2.2em 1.2em 1em 1.2em;
+        padding-top: 0.6em;
       }
     }
   }

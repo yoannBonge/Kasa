@@ -6,7 +6,11 @@ const Collapse = ({ title, children, housingStyle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [arrowDown, setArrowDown] = useState(false);
   const contentRef = useRef();
-  const housingVersion = housingStyle ? styles.housingStyle : "";
+  const housingVersion = housingStyle
+    ? isOpen
+      ? `${styles.housingStyle} ${styles.openCollapse}`
+      : styles.housingStyle
+    : "";
 
   ////////////////////////////////////////////////// BEHAVIOR
   const toggle = () => {
@@ -33,7 +37,9 @@ const Collapse = ({ title, children, housingStyle }) => {
         ref={contentRef}
         style={
           isOpen
-            ? { height: contentRef.current.scrollHeight + "px" }
+            ? {
+                height: contentRef.current.scrollHeight + "px",
+              }
             : { height: "0px" }
         }
       >

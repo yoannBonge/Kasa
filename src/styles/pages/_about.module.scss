@@ -8,10 +8,11 @@ main {
     display: flex;
     flex-direction: column;
     width: 70vw;
-    gap: 3.5em;
-    margin-bottom: 4em;
+    gap: 2em;
+    margin-bottom: 5em;
     @include devices(mobile) {
       width: 100%;
+      margin-bottom: 4em;
     }
   }
 }

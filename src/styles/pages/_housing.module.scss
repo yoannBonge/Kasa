@@ -78,6 +78,9 @@
         display: flex;
         align-items: center;
         gap: 0.7em;
+        @include devices(mobile) {
+          gap: 0.7vw;
+        }
         .hostName {
           display: flex;
           align-items: center;
@@ -90,6 +93,7 @@
           font-weight: 500;
           @include devices(mobile) {
             font-size: 1.1em;
+            width: auto;
           }
         }
         .hostImage {
@@ -121,7 +125,7 @@
       flex-direction: column;
       justify-content: center;
       margin-top: 1em;
-      gap: 4em;
+      gap: 2em;
     }
     .description {
       width: 47%;

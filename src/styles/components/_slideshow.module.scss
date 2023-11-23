@@ -36,9 +36,9 @@
       bottom: 6%;
       right: 50%;
       position: absolute;
-    }
-    @include devices(mobile) {
-      display: none;
+      @include devices(mobile) {
+        display: none;
+      }
     }
   }
 }
