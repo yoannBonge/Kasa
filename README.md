@@ -3,6 +3,17 @@
 
 Development of the web application for the fictional real estate rental company named "Kasa", with React and Vite. (This project was carried out as part of a web development training)
 
+## Authors
+
+- [@YoannBonge](https://www.github.com/yoannBonge)
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  https://yoannbonge.github.io/Kasa/
+```
 
 ## Screenshots
 
@@ -19,9 +30,7 @@ Development of the web application for the fictional real estate rental company 
 ![Kasa - Mobile (4/4)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Mobile%204.png)
 
 
-## Authors
 
-- [@YoannBonge](https://www.github.com/yoannBonge)
 
 
 ## Lessons Learned
