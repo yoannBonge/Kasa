@@ -1,8 +1,41 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Property rental web application
 
-Currently, two official plugins are available:
+Development of the web application for the fictional real estate rental company named "Kasa", with React and Vite. (This project was carried out as part of a web development training)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Screenshots
+
+![Kasa - Home (1/2)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Home%201.png)
+![Kasa - Home (2/2)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Home%202.png)
+![Kasa - Housing (1/2)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Housing%201.png)
+![Kasa - Housing (2/2)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Housing%202.png)
+![Kasa - About](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20About.png)
+![Kasa - 404 (1/2)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20404%201.png)
+![Kasa - 404 (2/2)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20404%202.png)
+![Kasa - Mobile (1/4)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Mobile%201.png)
+![Kasa - Mobile (2/4)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Mobile%202.png)
+![Kasa - Mobile (3/4)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Mobile%203.png)
+![Kasa - Mobile (4/4)](https://github.com/yoannBonge/Kasa/blob/main/public/screenshots/Kasa%20-%20Mobile%204.png)
+
+
+## Authors
+
+- [@YoannBonge](https://www.github.com/yoannBonge)
+
+
+## Lessons Learned
+
+By carrying out this project, i learned to master the basics of React.js (without external React libraries). I have learned how the React library operates, including the principles of components, states, etc. Additionally, I have explored the SCSS syntax with Sass.
+
+
+## Acknowledgements
+
+ - [OpenClassrooms (for learning)](https://openclassrooms.com/fr/)
+ - [From Scratch - Le développement Web de zéro (for learning)](https://www.youtube.com/@FromScratchDeveloppementWeb)
+ - [Katherine Oelsner (for the README editor)](https://github.com/octokatherine)
+
+
+## 🚀 About Me
+I am a french apprentice web developer in training at OpenClassrooms.
+
