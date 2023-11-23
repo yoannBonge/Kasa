@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "./",
+  "homepage": "https://yoannbonge.github.io/Kasa/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
