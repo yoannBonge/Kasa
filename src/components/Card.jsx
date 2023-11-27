@@ -12,7 +12,7 @@ const Card = () => {
     if (housing.id) {
       navigate("/housing", { state: { housing } });
     } else {
-      navigate("/page404");
+      navigate("*");
     }
   };
 

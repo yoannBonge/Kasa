@@ -1,12 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "../styles/components/_slideshow.module.scss";
-
+/**
+ * Creates a slideshow component.
+ *
+ * @param {string} title - The housing title for which the component displays pictures.
+ * @param {string[]} pictures - An array of picture URLs displayed in the slideshow.
+ *
+ * @returns {React.ReactNode} - A slideshow component that sequentially presents a collection of pictures,
+ * allowing navigation with arrows. It also features an automatic timer that advances to the next image every 5 seconds.
+ */
 const Slideshow = ({ title, pictures }) => {
   ////////////////////////////////////////////////// STATE
   const length = pictures.length;
   const ifOneOnlyPicture = length == 1 && styles.hidden;
   const [index, setIndex] = useState(0);
-  const timerRef = useRef(null);
 
   ////////////////////////////////////////////////// BEHAVIOR
   const handlePrevious = () => {
@@ -20,15 +27,10 @@ const Slideshow = ({ title, pictures }) => {
   };
 
   useEffect(() => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
-    timerRef.current = setTimeout(() => {
-      {
-        handleNext();
-      }
+    const interval = setInterval(() => {
+      handleNext();
     }, 5000);
-    return () => clearTimeout(timerRef.current);
+    return () => clearInterval(interval);
   }, [handleNext]);
 
   ////////////////////////////////////////////////// RENDER

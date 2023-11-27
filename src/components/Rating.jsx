@@ -1,6 +1,13 @@
 import React from "react";
 import styles from "../styles/components/_rating.module.scss";
-
+/**
+ * Creates a rating component.
+ *
+ * @param {string} rating - A rating from "1" to "5".
+ *
+ * @returns {React.ReactNode} - A rating component consisting of 5 stars, either red or grey, depending
+ * on the passed rating prop (ex: 2 red stars and 3 grey stars if the rating is "2").
+ */
 const Rating = ({ rating }) => {
   const numberOfStars = parseInt(rating, 10);
 

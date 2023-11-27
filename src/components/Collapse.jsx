@@ -1,6 +1,16 @@
 import React, { useState, useRef } from "react";
 import styles from "../styles/components/_collapse.module.scss";
-
+/**
+ * Creates a collapsible component.
+ *
+ * @param {string} title - The title of the collapse (left-aligned).
+ * @param {React.ReactNode} children - Nested content within the "styles.content" (Included as children because
+ * of different tag types.).
+ * @param {boolean} housingStyle - A boolean indicating whether to conditionally apply styling. If 'true', the
+ * class "housingStyle" is applied.
+ *
+ * @returns {React.ReactNode} - A collapsible component with the specified title, nested content, and optional styling.
+ */
 const Collapse = ({ title, children, housingStyle }) => {
   ////////////////////////////////////////////////// STATE
   const [isOpen, setIsOpen] = useState(false);
