@@ -7,13 +7,6 @@ Development of the web application for the fictional real estate rental company 
 
 - [@YoannBonge](https://www.github.com/yoannBonge)
 
-## Deployment
-
-To deploy this project run
-
-```bash
-  https://yoannbonge.github.io/Kasa/
-```
 
 ## Screenshots
 
