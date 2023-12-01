@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
-import { useLocation } from "react-router-dom";
 import Slideshow from "../components/Slideshow";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
@@ -9,8 +9,10 @@ import styles from "../styles/pages/_housing.module.scss";
 
 const Housing = () => {
   ////////////////////////////////////////////////// STATE
-  const location = useLocation();
-  const { housing } = location.state;
+  const { id } = useParams();
+  const [data, setData] = useState([]);
+  const [housing, setHousing] = useState();
+  const navigate = useNavigate();
 
   ////////////////////////////////////////////////// BEHAVIOR
   const displayTags = (housing) => {
@@ -27,6 +29,21 @@ const Housing = () => {
       </li>
     ));
   };
+
+  useEffect(() => {
+    fetch("housings.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        const currentHousing = data.find((item) => item.id === id);
+        setHousing(currentHousing);
+        if (!currentHousing) {
+          navigate("*");
+        } else {
+          setHousing(currentHousing);
+        }
+      });
+  }, []);
 
   ////////////////////////////////////////////////// RENDER
   return (

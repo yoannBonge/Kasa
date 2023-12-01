@@ -8,12 +8,8 @@ const Card = () => {
   const navigate = useNavigate();
 
   ////////////////////////////////////////////////// BEHAVIOR
-  const handleClick = (housing) => {
-    if (housing.id) {
-      navigate("/housing", { state: { housing } });
-    } else {
-      navigate("*");
-    }
+  const handleClick = (housingId) => {
+    navigate(`/housing/${housingId}`);
   };
 
   useEffect(() => {
@@ -28,7 +24,7 @@ const Card = () => {
       <div
         className={styles.card}
         key={housing.id}
-        onClick={() => handleClick(housing)}
+        onClick={() => handleClick(housing.id)}
       >
         <div className={styles.cardContent}>
           <div className={styles.cardOverlay}>
