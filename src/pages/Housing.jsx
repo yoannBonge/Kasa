@@ -10,7 +10,6 @@ import styles from "../styles/pages/_housing.module.scss";
 const Housing = () => {
   ////////////////////////////////////////////////// STATE
   const { id } = useParams();
-  const [data, setData] = useState([]);
   const [housing, setHousing] = useState();
   const navigate = useNavigate();
 
@@ -31,10 +30,9 @@ const Housing = () => {
   };
 
   useEffect(() => {
-    fetch("housings.json")
+    fetch("/housings.json")
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
         const currentHousing = data.find((item) => item.id === id);
         setHousing(currentHousing);
         if (!currentHousing) {
@@ -44,6 +42,10 @@ const Housing = () => {
         }
       });
   }, []);
+
+  if (!housing) {
+    return;
+  }
 
   ////////////////////////////////////////////////// RENDER
   return (

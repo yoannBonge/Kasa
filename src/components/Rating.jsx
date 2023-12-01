@@ -14,7 +14,7 @@ const Rating = ({ rating }) => {
   const starsArray = Array.from({ length: 5 }, (_, index) => (
     <img
       key={index}
-      src={index < numberOfStars ? "red-star.svg" : "gray-star.svg"}
+      src={index < numberOfStars ? "/red-star.svg" : "/gray-star.svg"}
       alt='étoile'
       className={styles.star}
     />

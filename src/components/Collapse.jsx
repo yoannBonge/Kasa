@@ -36,7 +36,7 @@ const Collapse = ({ title, children, housingStyle }) => {
           <h3 className={`${styles.category} ${housingVersion}`}>{title}</h3>
           <img
             className={`${styles.arrow} ${arrowDown && styles.reverseArrow}`}
-            src='collapse-arrow.svg'
+            src='/collapse-arrow.svg'
             alt='Flèche pour ouvrir/fermer le contenu'
             onClick={toggle}
           />

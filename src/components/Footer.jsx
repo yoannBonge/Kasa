@@ -7,7 +7,7 @@ const Footer = () => {
       <div className={styles.footerElements}>
         <img
           className={styles.logoFooter}
-          src='logo-footer.svg'
+          src='/logo-footer.svg'
           alt='logo Kasa'
         />
         <span className={styles.rightsReserved}>

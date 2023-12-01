@@ -44,13 +44,13 @@ const Slideshow = ({ title, pictures }) => {
         />
         <img
           className={`${styles.arrowPrev} ${ifOneOnlyPicture}`}
-          src='carrousel-arrow-left.svg'
+          src='/carrousel-arrow-left.svg'
           alt='Flèche image précédente'
           onClick={handlePrevious}
         />
         <img
           className={`${styles.arrowNext} ${ifOneOnlyPicture}`}
-          src='carrousel-arrow-right.svg'
+          src='/carrousel-arrow-right.svg'
           alt='Flèche image suivante'
           onClick={handleNext}
         />
